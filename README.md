@@ -69,6 +69,8 @@ This is a **simulated dataset** created for educational, analytical, and portfol
 
 It does **not** represent real patients, hospitals, pharmacies, healthcare facilities, pharmaceutical companies, or real-world inventory records.
 
+No personal or confidential information is contained in the dataset.
+
 ---
 
 ##  Data Validation
@@ -138,7 +140,7 @@ Analysis of the 25 validated inventory records produced the following results:
 | Total inventory value    | **₦2,009,950** |
 | Average inventory value  |    **₦80,398** |
 | Average unit price       |    **₦439.60** |
-| Low-stock medicines      |          **9** |
+| Low-stock medicines      |          **5** |
 | Critical-stock medicines |          **4** |
 | Overstocked medicines    |          **3** |
 | Near-expiry medicines    |          **4** |
@@ -149,9 +151,17 @@ Analysis of the 25 validated inventory records produced the following results:
 
 ### 1. Low-Stock Medicines
 
-**9 medicines** were classified as low stock based on the defined reorder-level criterion.
+**5 medicines** were classified as low stock based on the defined reorder-level criterion.
 
 These medicines require review by pharmacy and procurement teams to determine appropriate replenishment needs.
+
+The identified low-stock medicines were:
+
+* **DRG002 — Amoxicillin 500mg**
+* **DRG006 — Ciprofloxacin 500mg**
+* **DRG013 — Salbutamol Inhaler**
+* **DRG016 — Azithromycin 500mg**
+* **DRG022 — Doxycycline 100mg**
 
 ### 2. Critical-Stock Medicines
 
@@ -159,15 +169,22 @@ These medicines require review by pharmacy and procurement teams to determine ap
 
 These medicines had quantities at or below 50% of their defined reorder levels and may require urgent inventory review.
 
+The identified critical-stock medicines were:
+
+* **DRG004 — ORS Sachets**
+* **DRG008 — Insulin**
+* **DRG011 — Ceftriaxone Injection**
+* **DRG017 — ORS Sachets**
+
 ### 3. Overstocked Medicines
 
 **3 medicines** were classified as overstocked:
 
-* **DRG007 — Ibuprofen 400mg:** ₦78,000 inventory value
-* **DRG014 — Hydrochlorothiazide:** ₦80,000 inventory value
-* **DRG019 — Folic Acid:** ₦72,000 inventory value
+* **DRG007 — Ibuprofen 400mg**
+* **DRG014 — Hydrochlorothiazide**
+* **DRG019 — Folic Acid**
 
-All three were below the project's average inventory-value benchmark of **₦80,398**.
+These records indicate inventory levels above their defined maximum-stock thresholds.
 
 ### 4. Near-Expiry Medicines
 
@@ -189,12 +206,6 @@ These records combine inventory concerns with approaching expiry dates and there
 * Quantity: **850 units**
 * Unit price: **₦450**
 * Inventory value: **₦382,500**
-
-### 6. Facility-Level Distribution
-
-The validated inventory records were distributed across **12 healthcare facilities**.
-
-Lagos General Hospital had **3 inventory records**, while each of the remaining 11 facilities had **2 records**.
 
 ---
 
@@ -254,7 +265,7 @@ Potential management actions include:
 ##  Repository Structure
 
 ```text
-drug-inventory-management/
+drug-inventory-management-system-using-python/
 │
 ├── data/
 │   └── README.md
@@ -298,7 +309,7 @@ The simulated dataset is created within the Jupyter notebook, meaning users can 
 To reproduce the project:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/drug-inventory-management.git
+git clone https://github.com/Promise-Steve/drug-inventory-management-system-using-python.git
 ```
 
 Then open:
